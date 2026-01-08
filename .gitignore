@@ -1,0 +1,28 @@
+# Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ / NetBeans / Eclipse
+/.idea/
+/*.iml
+/.classpath
+/.project
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build
+**/target/
+
+# Temporary
+*.tmp
+
+# IDE specific
+nbproject/
