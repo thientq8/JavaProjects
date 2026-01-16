@@ -81,7 +81,34 @@ public class PerSon {
     public String getPersonInformation() {
         return this.unique_id + " - " + this.name + " - " + this.gender + " - " + this.city;
     }
-
+    public String getPersonInformation(String infor) {
+        String result = "";
+        result = switch (infor) {
+            case "a" -> this.unique_id;
+            case "b" -> this.name;
+            case "c" -> this.gender;
+            default -> "Không có gì";
+        };
+        return result;
+    }
+    public String getPersonInformation(int infor) {
+        String result = "";
+        result = switch (infor) {
+            case 1 -> this.unique_id;
+            case 2 -> this.name;
+            case 3 -> this.gender;
+            default -> "Không có gì";
+        };
+        return result;
+    }
+    
+    public String getPersonInformation(String infor1, String infor2, 
+            String infor3) {
+        return infor1 + this.unique_id +  " - " + infor2 + this.name 
+                + " - " + infor3 + this.gender ;
+    }
+    
+    
     // KHAI BÁO CÁC PHƯƠNG THỨC 
     // CỦA LỚP PERSON
     public void Eat() {
