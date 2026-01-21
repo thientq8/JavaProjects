@@ -9,5 +9,20 @@ package Models;
  * @author Dell
  */
 public class HinhThoi {
-    
+    public int canh;    
+
+    public HinhThoi() {
+    }
+
+    public HinhThoi(int canh) {
+        this.canh = canh;
+    }
+
+    public int getCanh() {
+        return canh;
+    }
+
+    public void setCanh(int canh) {
+        this.canh = canh;
+    }
 }
