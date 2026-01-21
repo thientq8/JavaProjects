@@ -10,10 +10,7 @@ import java.util.Scanner;
 /**
  * Menu đơn giản cho module KETHUA.
  *
- * 1 -> tạo classOngCo
- * 2 -> tạo classOngNoi
- * 3 -> tạo classCha
- * 4 -> tạo classCon
+ * 1 -> tạo classOngCo 2 -> tạo classOngNoi 3 -> tạo classCha 4 -> tạo classCon
  *
  * Sau khi tạo sẽ in tất cả thuộc tính ra màn hình.
  */
@@ -75,7 +72,7 @@ public class KETHUA {
 
                     ongNoi = new classOngNoi(bankCard);
                     // set thông tin ông cố (thừa kế)
-                    ongNoi.setCCCD(ccccdOn);
+                    ongNoi.setCCCD(cccdOn);
                     ongNoi.setHoTen(hoTenOn);
                     ongNoi.setNamSinh(namSinhOn);
 
@@ -140,26 +137,34 @@ public class KETHUA {
     }
 
     private static String formatOngCo(classOngCo o) {
-        if (o == null) return "null";
+        if (o == null) {
+            return "null";
+        }
         return "CCCD: " + safe(o.getCCCD()) + "\n"
                 + "Họ tên: " + safe(o.getHoTen()) + "\n"
                 + "Năm sinh: " + safe(o.getNamSinh());
     }
 
     private static String formatOngNoi(classOngNoi o) {
-        if (o == null) return "null";
+        if (o == null) {
+            return "null";
+        }
         return formatOngCo(o) + "\n"
                 + "BankCard: " + safe(o.getBankCard());
     }
 
     private static String formatCha(classCha c) {
-        if (c == null) return "null";
+        if (c == null) {
+            return "null";
+        }
         return formatOngNoi(c) + "\n"
                 + "Mobile: " + safe(c.getMobile());
     }
 
     private static String formatCon(classCon c) {
-        if (c == null) return "null";
+        if (c == null) {
+            return "null";
+        }
         return formatCha(c) + "\n"
                 + "MSSV: " + safe(c.getMSSV());
     }
@@ -167,3 +172,4 @@ public class KETHUA {
     private static String safe(String s) {
         return s == null ? "(null)" : s;
     }
+}
