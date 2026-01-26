@@ -65,4 +65,13 @@ public class Book {
         this.Year = Year;
     }
     
+    public void printThongtin(){
+        {
+            System.out.println("ID: " + this.getID());
+            System.out.println("Name: " + this.getName());
+            System.out.println("Author: " + this.getAuthor());
+            System.out.println("Year: " + this.getYear());
+        }
+    }
+    
 }
