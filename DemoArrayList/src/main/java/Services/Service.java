@@ -139,22 +139,24 @@ public class Service {
     }
 
     ;
-    public void TimKiem(Scanner scan) {
+    public int TimKiem(Scanner scan) {
         System.out.println("Nhập ID sách cần tìm: ");
         String findID = scan.nextLine();
-        boolean found = false;
+        //boolean found = false;
+        int found = -1;//Tìm không thấy Book ID
 
         for (Book b : this.ds_book) {
             if (b.getID().equalsIgnoreCase(findID)) {
                 System.out.println("~~~ Kết quả tìm thấy ~~~");
                 System.out.println("ID: " + b.getID() + " | Tên: " + b.getName() + " | Năm: " + b.getYear() + " | Tác giả: " + b.getAuthor());
-                found = true;
+                found = ds_book.indexOf(b);
                 break;
             }
         }
-        if (!found) {
+        if (found == -1) {
             System.out.println("Không tìm thấy sách có ID: " + findID);
         }
+        return found;
     }
 
     ;

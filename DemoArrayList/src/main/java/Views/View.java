@@ -26,7 +26,7 @@ public class View {
             System.out.println("0. Thoát chương trình");
             System.out.println("Vui lòng nhập giá trị cần làm"
                     + ": ");
-            int option = 0;
+            var option = 0;
             option = Integer.parseInt(scan.nextLine());
             switch (option) {
                 case 1 -> {

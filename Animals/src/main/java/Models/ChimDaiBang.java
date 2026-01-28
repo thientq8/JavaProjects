@@ -27,7 +27,7 @@ public class ChimDaiBang extends Animal {
     
     @Override
     public void Keu() {
-        System.out.println(this.Name + "Kêu: \n kii-iii-iiii \n kee-eee-eee \n kyaaakk.... "); 
+        System.out.println(this.Name + "Kêu: éc éc .... "); 
     }   
 
     @Override
