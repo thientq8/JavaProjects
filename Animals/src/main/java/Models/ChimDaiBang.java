@@ -8,7 +8,7 @@ package Models;
  *
  * @author LENOVO
  */
-public class ChimDaiBang extends Animal_2chi {
+public class ChimDaiBang extends Animal {
 
     public ChimDaiBang() {
     }
@@ -17,12 +17,10 @@ public class ChimDaiBang extends Animal_2chi {
         super(Name);
     }
 
-    @Override
     public String getName() {
         return Name;
     }
 
-    @Override
     public void setName(String Name) {
         this.Name = Name;
     }
@@ -31,5 +29,10 @@ public class ChimDaiBang extends Animal_2chi {
     public void Keu() {
         System.out.println(this.Name + "Kêu: \n kii-iii-iiii \n kee-eee-eee \n kyaaakk.... "); 
     }   
+
+    @Override
+    public void Chay() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

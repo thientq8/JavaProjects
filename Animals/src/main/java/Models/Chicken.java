@@ -8,25 +8,16 @@ package Models;
  *
  * @author Dell
  */
-public class Chicken extends Animal_2chi {
-
-    public Chicken() {
-    }
-
-    public Chicken(String Name) {
-        super(Name);
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String Name) {
-        this.Name = Name;
-    }
+public class Chicken extends Animal {
 
     @Override
     public void Keu() {
-        System.out.println(this.Name + " kêu chip chip...");
-    }    
+        System.out.println("Ò ó o ...");
+    }
+
+    @Override
+    public void Chay() {
+        System.out.println("Chạy 2 chân ...");
+    }
+    
 }

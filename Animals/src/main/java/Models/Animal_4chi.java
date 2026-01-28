@@ -8,7 +8,9 @@ package Models;
  *
  * @author huutr
  */
-public class Animal_4chi extends Animal {
+public abstract class Animal_4chi extends Animal {
+    
+    
     public Animal_4chi (){
         
     }

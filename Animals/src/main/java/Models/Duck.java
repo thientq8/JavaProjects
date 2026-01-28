@@ -8,7 +8,7 @@ package Models;
  *
  * @author Dell
  */
-public class Duck extends Animal_2chi {
+public class Duck extends Animal {
 
     public Duck() {
     }
@@ -29,4 +29,9 @@ public class Duck extends Animal_2chi {
     public void Keu() {
         System.out.println(this.Name + " kêu quạc quạc ...");
     }    
+
+    @Override
+    public void Chay() {
+        System.out.println("Chạy 2 chân ...");
+    }
 }

@@ -12,26 +12,15 @@ import Models.*;
 public class Animals {
 
     public static void main(String[] args) {
-
-        Animal animal = new Animal("Animal");
-        animal.Keu();
-        Animal_2chi haichi = new Animal_2chi("2 chi");
-        Animal_4chi bonchi = new Animal_4chi("4 chi");
-        Chicken chicken = new Chicken("Chicken");
-        chicken.Keu();
-        Duck duck = new Duck("Duck");
-        duck.Keu();
-        Conco co = new Conco("Co");
-        co.Keu();
-
-        Animal ani1 = new Animal("Ani1");
-        Animal ani2 = new Chicken("Ani2");
-        Animal ani3 = new Duck("Ani3");
-        Animal ani4 = new Conco("Ani4");
-        ani1.Keu();
-        ani2.Keu();
-        ani3.Keu();
-        ani4.Keu();
+        Duck vit = new Duck("Vịt");
+        vit.Keu();
+        vit.Chay();
+        Chicken ga = new Chicken();
+        ga.Keu();
+        ga.Chay();
+        Trau trau = new Trau();
+        trau.Keu();
+        trau.Chay();
         
     }
 }

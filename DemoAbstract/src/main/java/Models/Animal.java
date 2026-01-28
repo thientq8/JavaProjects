@@ -6,16 +6,17 @@ package Models;
 
 /**
  *
- * @author huutr
+ * @author Dell
  */
-public class Trau extends Animal_4chi {
+public abstract class Animal {
 
-    public Trau() {
-    }
+    public String Name;
+    public int Chi;// 2 chân hay 4 chân
 
-    public Trau(String Name) {
-        super(Name);
-    }
+    // Khai báo không có ruột
+    public abstract void Keu();
+
+    public abstract void Chay();
 
     public String getName() {
         return Name;
@@ -25,13 +26,12 @@ public class Trau extends Animal_4chi {
         this.Name = Name;
     }
 
-    @Override
-    public void Keu() {
-        System.out.println("Nghé ọoooooooooo...");
+    public int getChi() {
+        return Chi;
     }
 
-    @Override
-    public void Chay() {
-        System.out.println("Chạy 4 chân ...");
+    public void setChi(int Chi) {
+        this.Chi = Chi;
     }
+
 }

@@ -3,7 +3,6 @@
  */
 package Views;
 
-import Models.Book;
 import Services.*;
 import java.util.Scanner;
 
@@ -19,35 +18,34 @@ public class View {
     public static void main(String[] args) {
         service = new Service();
         while (true) {
-            System.out.println("Vui lòng nhập giá trị cần làm");
+            System.out.println("1. Nhập");
+            System.out.println("2. Xuất thông tin");
+            System.out.println("3. Tìm kiếm");
+            System.out.println("4. Xóa");
+            System.out.println("5. Chỉnh sửa thông tin");
+            System.out.println("0. Thoát chương trình");
+            System.out.println("Vui lòng nhập giá trị cần làm"
+                    + ": ");
             int option = 0;
             option = Integer.parseInt(scan.nextLine());
             switch (option) {
                 case 1 -> {
                     service.Nhap(scan);
-                    service.Xuat();
                 }
                 case 2 ->
                     service.Xuat();
-                case 3 -> {
-                    System.out.println("Vui lòng nhập Mã cuốn sách cần tìm:");
-                    //option = Integer.parseInt(scan.nextLine());
-                    service.TimKiem(scan.nextLine());
+                case 3 ->
+                    service.TimKiem(scan);
+                case 4 ->
+                    service.Xoa(scan);
+                case 5 ->
+                    service.Update(scan);
+                case 0 -> {
+                    System.out.print("Đang thoát chương trình");
+                    System.exit(0);
                 }
-                case 4 -> {
-                    System.out.println("Vui lòng nhập Mã cuốn sách cần xoá:");
-                    //option = Integer.parseInt(scan.nextLine());
-                    service.XoaSach(scan.nextLine());
-                }
-                case 5 -> {
-                    Book b = new Book();
-                    service.EditName(b);
-                }
-                case 6 -> {
-                    System.out.println("Vui lòng nhập Mã cuốn sách cần sửa:");
-                    option = Integer.parseInt(scan.nextLine());
-                    service.EditAuthor(String.valueOf(option));
-                }
+                default ->
+                    System.out.println("Lựa chọn không hợp lệ!");
             }
         }
     }

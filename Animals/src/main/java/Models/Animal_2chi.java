@@ -8,12 +8,13 @@ package Models;
  *
  * @author Dell
  */
-public class Animal_2chi extends Animal {
+public class Animal_2chi {
+
+    String Name;
 
     public Animal_2chi() {
     }
 
-    
     public String getName() {
         return Name;
     }
@@ -23,12 +24,6 @@ public class Animal_2chi extends Animal {
     }
 
     public Animal_2chi(String Name) {
-        super(Name);
     }
 
-    @Override
-    public void Keu() {
-        super.Keu(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-    }
-    
 }

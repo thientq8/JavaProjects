@@ -8,14 +8,15 @@ package Models;
  *
  * @author Dell
  */
-public abstract class Animal {
-    public String Name;
-    public Animal()
-    {
+public class Khi extends Animal {
+
+    @Override
+    public void Keu() {
+        System.out.println("Khẹc khẹc khẹc ...");
     }
-    public Animal(String Name) {
-        this.Name = Name;
+
+    @Override
+    public void Chay() {
+        System.out.println("Chạy 4 chi ... ");
     }
-    public abstract void Keu();
-    public abstract void Chay();
 }
